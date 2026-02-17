@@ -17,6 +17,13 @@ import ProgrammeRecommendation from "./pages/ProgrammeRecommendation";
 import UniversityFormsPage from "./pages/UniversityForms";
 import Contact from "./pages/ContactPage";
 import AboutUsPage from "./pages/AboutUsPage";
+import FeaturesPage from "./pages/Features";
+import LearnSkill from "./pages/LearnSkill";
+import CourseDetail from "./pages/CourseDetail";
+import Support from "./pages/Support";
+import HelpCenter from "./pages/HelpCenter";
+import Terms from "./pages/Terms";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 const queryClient = new QueryClient();
 
@@ -40,7 +47,13 @@ const App = () => (
              <Route path="/contact" element={<Contact />} />
              <Route path="/about" element={<AboutUsPage />} />
             <Route path="/programmerecommendation" element={<ProgrammeRecommendation />} />
-
+            <Route path="/features" element={<FeaturesPage />} />
+            <Route path="/technicalskills" element={<LearnSkill />} />
+            <Route path="/technicalskills/:id" element={<CourseDetail />} />
+             <Route path="/support" element={<Support />} />
+             <Route path="/helpcenter" element={<HelpCenter />} />
+             <Route path="/termsandconditions" element={<Terms />} /> 
+             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

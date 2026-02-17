@@ -6,17 +6,18 @@ import { Send, Instagram, Twitter, Facebook, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const quickLinks = [
-  { label: 'About Us', href: '#about' },
-  { label: 'Contact Us', href: '#footer' },
-  { label: 'Check Results', href: '/signup' },
-  { label: 'Find Program', href: '/signup' },
+  { label: 'About Us', href: '/about' },
+  { label: 'Contact Us', href: '/contact' },
+  { label: 'Check Results', href: '/resultchecker' },
+  { label: 'Find Program', href: '/programmerecommendation' },
 ];
 
 const platformLinks = [
   { label: 'Login', href: '/login' },
-  { label: 'Support', href: '#' },
-  { label: 'Help Center', href: '#' },
-  { label: 'Privacy Policy', href: '#' },
+  { label: 'Support', href: '/support' },
+  { label: 'Help Center', href: '/helpcenter' },
+  { label: 'Privacy Policy', href: '/privacy' },
+  { label: 'Terms & Conditions', href: '/termsandconditions' },
 ];
 
 const socials = [
