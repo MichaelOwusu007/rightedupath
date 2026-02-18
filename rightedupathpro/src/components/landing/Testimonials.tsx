@@ -6,8 +6,8 @@ import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const testimonialStats = [
   { label: 'Student Satisfaction', value: 95, suffix: '%' },
-  { label: 'Successful Applications', value: 5000, suffix: '+' },
-  { label: 'Partner Institutions', value: 120, suffix: '' },
+  { label: 'Successful Applications', value: 100, suffix: '+' },
+  { label: 'Partner Institutions', value: 4, suffix: '' },
 ];
 
 const testimonials = [
