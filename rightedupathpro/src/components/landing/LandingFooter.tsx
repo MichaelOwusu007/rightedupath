@@ -33,43 +33,68 @@ const LandingFooter = () => {
 
   return (
     <footer id="footer" ref={ref} className="py-16 bg-gradient-dark">
-      <motion.div initial={{ opacity: 0 }} animate={isVisible ? { opacity: 1 } : {}} className="container mx-auto px-4">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={isVisible ? { opacity: 1 } : {}}
+        className="container mx-auto px-4"
+      >
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
           {/* Logo */}
           <div>
-            <Link to="/" className="font-display text-xl font-bold" style={{ color: 'white' }}>
+            <Link to="/" className="font-display text-xl font-bold text-white">
               Righted<span className="text-gradient-lime">Upath</span>
             </Link>
-            <p className="mt-3 text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.6)' }}>
+
+            <p className="mt-3 text-sm text-white/60 leading-relaxed">
               Empowering students to navigate their academic journey with confidence.
             </p>
+
             <div className="flex gap-3 mt-4">
               {socials.map((s, i) => (
-                <a key={i} href={s.href} className="p-2 rounded-lg border transition-all hover:bg-primary/20" style={{ borderColor: 'rgba(255,255,255,0.15)', color: 'rgba(255,255,255,0.7)' }}>
+                <a
+                  key={i}
+                  href={s.href}
+                  className="p-2 rounded-lg border border-white/20 text-white/70 hover:bg-primary/20 transition-all"
+                >
                   <s.icon className="h-4 w-4" />
                 </a>
               ))}
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Quick Links ✅ FIXED */}
           <div>
-            <h4 className="font-display font-semibold mb-4" style={{ color: 'white' }}>Quick Links</h4>
+            <h4 className="font-display font-semibold mb-4 text-white">
+              Quick Links
+            </h4>
+
             <div className="space-y-2">
-              {quickLinks.map(l => (
-                <a key={l.label} href={l.href} className="block text-sm transition-colors hover:text-primary" style={{ color: 'rgba(255,255,255,0.6)' }}>
+              {quickLinks.map((l) => (
+                <Link
+                  key={l.label}
+                  to={l.href}
+                  className="block text-sm text-white/60 hover:text-primary transition-colors"
+                >
                   {l.label}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
 
           {/* Platform */}
           <div>
-            <h4 className="font-display font-semibold mb-4" style={{ color: 'white' }}>Platform</h4>
+            <h4 className="font-display font-semibold mb-4 text-white">
+              Platform
+            </h4>
+
             <div className="space-y-2">
-              {platformLinks.map(l => (
-                <Link key={l.label} to={l.href} className="block text-sm transition-colors hover:text-primary" style={{ color: 'rgba(255,255,255,0.6)' }}>
+              {platformLinks.map((l) => (
+                <Link
+                  key={l.label}
+                  to={l.href}
+                  className="block text-sm text-white/60 hover:text-primary transition-colors"
+                >
                   {l.label}
                 </Link>
               ))}
@@ -78,25 +103,32 @@ const LandingFooter = () => {
 
           {/* Newsletter */}
           <div>
-            <h4 className="font-display font-semibold mb-4" style={{ color: 'white' }}>Newsletter</h4>
-            <p className="text-sm mb-3" style={{ color: 'rgba(255,255,255,0.6)' }}>Stay updated with latest features and news.</p>
+            <h4 className="font-display font-semibold mb-4 text-white">
+              Newsletter
+            </h4>
+
+            <p className="text-sm text-white/60 mb-3">
+              Stay updated with latest features and news.
+            </p>
+
             <div className="flex gap-2">
               <input
                 type="email"
                 value={email}
-                onChange={e => setEmail(e.target.value)}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="Your email"
-                className="flex-1 px-3 py-2 rounded-lg text-sm bg-transparent border input-focus"
-                style={{ borderColor: 'rgba(255,255,255,0.2)', color: 'white' }}
+                className="flex-1 px-3 py-2 rounded-lg text-sm bg-transparent border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-primary"
               />
+
               <Button size="sm" className="bg-gradient-lime text-primary-foreground px-3">
                 <Send className="h-4 w-4" />
               </Button>
             </div>
           </div>
+
         </div>
 
-        <div className="mt-12 pt-6 text-center text-sm" style={{ borderTop: '1px solid rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.4)' }}>
+        <div className="mt-12 pt-6 text-center text-sm border-t border-white/10 text-white/40">
           © {new Date().getFullYear()} RightedUpath. All rights reserved.
         </div>
       </motion.div>
